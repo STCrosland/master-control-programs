@@ -146,15 +146,13 @@ footer {
     color: #f90000;
     text-shadow: 1px 1px 3px #330033;
 }
-/* === MOBILE MENU RULES (UNDER 700px) ==== */
+//* === MOBILE MENU RULES (UNDER 700px) ==== */
 @media screen and (max-width: 699px) {
 
-    /* Show hamburger on mobile */
     .menu-btn {
         display: inline-block;
     }
 
-    /* Make the nav a dropdown container on mobile */
     nav {
         flex-direction: column;
         align-items: stretch;
@@ -163,16 +161,49 @@ footer {
         padding: 0;
     }
 
-    /* Hide links by default on mobile */
     nav a {
         display: none;
         width: 100%;
         box-sizing: border-box;
     }
 
-    /* Show links when JS toggles nav.open */
     nav.open a {
         display: block;
+    }
+
+    /* === HEADER LOOK LIKE YOUR SCREENSHOT === */
+    header {
+        padding-left: 165px;   /* space for logo */
+        padding-right: 15px;
+        align-items: center;   /* keep text centered in the remaining space */
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    /* keep logo left and slightly smaller so it never overlaps */
+    .logo {
+        top: 16px;
+        left: 16px;
+    }
+
+    .logo img {
+        width: 125px;
+        height: auto;
+    }
+
+    /* IMPORTANT: stop using 400% on mobile */
+    #master h1,
+    #control h1,
+    #programs h1 {
+        font-size: 220%;
+        line-height: 1.05;
+        text-align: center;
+        margin: 0;
+    }
+
+    /* Programs can be a bit bigger like your image */
+    #programs h1 {
+        font-size: 260%;
     }
 }
 
