@@ -350,11 +350,9 @@ footer {
     color: #f90000;
     text-shadow: 1px 1px 3px #330033;
 }
-
-//* === MOBILE MENU RULES (UNDER 700px) ==== */
+/* === MOBILE MENU RULES (UNDER 700px) ==== */
 @media screen and (max-width: 699px) {
 
-    /* keep menu behavior */
     .menu-btn {
         display: inline-block;
     }
@@ -377,28 +375,42 @@ footer {
         display: block;
     }
 
-    /* === HEADER FIX === */
+    /* === HEADER LOOK LIKE YOUR SCREENSHOT === */
     header {
-        align-items: flex-start;
-        padding-left: 170px; /* MAKES ROOM FOR LOGO */
-        padding-top: 20px;
+        padding-left: 165px;   /* space for logo */
+        padding-right: 15px;
+        align-items: center;   /* keep text centered in the remaining space */
+        justify-content: center;
         box-sizing: border-box;
     }
 
-    /* SHRINK TEXT FOR MOBILE */
+    /* keep logo left and slightly smaller so it never overlaps */
+    .logo {
+        top: 16px;
+        left: 16px;
+    }
+
+    .logo img {
+        width: 125px;
+        height: auto;
+    }
+
+    /* IMPORTANT: stop using 400% on mobile */
     #master h1,
     #control h1,
     #programs h1 {
-        font-size: 180%;
-        line-height: 1.1;
-        text-align: right;
+        font-size: 220%;
+        line-height: 1.05;
+        text-align: center;
+        margin: 0;
     }
 
-    /* OPTIONAL: slightly smaller logo on phones */
-    .logo img {
-        width: 110px;
+    /* Programs can be a bit bigger like your image */
+    #programs h1 {
+        font-size: 260%;
     }
 }
+
 
 
 /* ===== Tablet ===== */
