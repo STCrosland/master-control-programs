@@ -351,8 +351,10 @@ footer {
     text-shadow: 1px 1px 3px #330033;
 }
 
-/* === MOBILE MENU RULES (UNDER 700px) ==== */
+//* === MOBILE MENU RULES (UNDER 700px) ==== */
 @media screen and (max-width: 699px) {
+
+    /* keep menu behavior */
     .menu-btn {
         display: inline-block;
     }
@@ -375,18 +377,29 @@ footer {
         display: block;
     }
 
-    #master h1{
-        font-size: 400%;
+    /* === HEADER FIX === */
+    header {
+        align-items: flex-start;
+        padding-left: 170px; /* MAKES ROOM FOR LOGO */
+        padding-top: 20px;
+        box-sizing: border-box;
     }
 
-    #control h1{
-        font-size: 400%;
+    /* SHRINK TEXT FOR MOBILE */
+    #master h1,
+    #control h1,
+    #programs h1 {
+        font-size: 180%;
+        line-height: 1.1;
+        text-align: left;
     }
 
-    #programs h1{
-        font-size: 400%;
+    /* OPTIONAL: slightly smaller logo on phones */
+    .logo img {
+        width: 110px;
     }
 }
+
 
 /* ===== Tablet ===== */
 @media screen and (min-width: 700px) {
