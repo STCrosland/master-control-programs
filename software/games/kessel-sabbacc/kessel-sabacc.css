@@ -1,23 +1,35 @@
+/*
+Title: Style
+Authors: Spencer T. Crosland
+Purpose: Kessel Sabbac Styling for all pages in Master Contol Programs Site
+*/
+
 /*=== Body ===*/
 body {
     padding: 0;
     margin: 0;
-    background: url(../../../images/styling/the-grid-background.jpg) no-repeat;
+    background: url(../../../images/styling/the-grid-background.jpg) no-repeat center fixed;
     background-size: cover;
-     min-height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-rows: auto auto 1fr auto;
 }
 
-/*=== Header ===*/
-header{
-    background: url("../../../images/styling/header-with-mcp.jpg") no-repeat center;
+/* === HEADER === */
+header {
+    background: url("../../../images/styling/header.jpg") no-repeat center;
     background-size: 100% 300px;
     height: 230px;
-    min-width: 1200px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    box-sizing: border-box;
 }
 
+/*= LOGO = */
 .logo {
     position: absolute;
     top: 20px;
@@ -25,7 +37,7 @@ header{
 }
 
 .logo img {
-    width: 180px;
+    width: 133px;
     height: auto;
     border: 5px solid #00d0f9;
     border-radius: 20px;
@@ -33,6 +45,39 @@ header{
     display: block;
 }
 
+/* = HEADER TEXT = */
+#master h1{
+    font-size: 200%;
+    margin: 0;
+    color: #9b6464;
+    -webkit-text-stroke-color: #ff0000;
+    text-shadow:
+        0 0 3px #ff0000,
+        0 0 6px #ff0000,
+        0 0 10px #ff0000;
+}
+
+#control h1{
+    font-size: 200%;
+    margin: 0;
+    color: #185b6a;
+    -webkit-text-stroke-color: #00d0ff;
+    text-shadow:
+        0 0 3px #00d0ff,
+        0 0 10px #00d0ff,
+        0 0 6px #00d0ff;
+}
+
+#programs h1 {
+    font-size: 200%;
+    margin: 0;
+    color: #007226; 
+    -webkit-text-stroke-color: #00ff55;
+    text-shadow:
+        0 0 3px #00ff55,
+        0 0 6px #00ff55,
+        0 0 10px #00ff55;
+}
 
 /*=== Navagation ===*/
 nav {
@@ -53,11 +98,9 @@ nav a {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.5em;
-
     display: block;
     padding: 20px;
     text-align: center;
-
     border-top: 1px solid grey;
     text-shadow: 0px 0px 3px #22a203;
     transition: background 0.3s ease, text-shadow 0.3s ease;
@@ -90,40 +133,6 @@ nav a:hover {
   transform: translate(0, -11px) rotate(45deg);
 }
 
-/*=== Main Content===*/
-
-.welcome-message > h1 {
-    color: #fff;
-    grid-column: 1 / -1;
-    justify-self: center;
-    text-align: center;
-}
-
-.projects{
-    width: 90%;
-    max-width: 1400px;
-    margin: 40px auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 40px;
-}
-
-.projects img {
-    height: 350px;
-    width: 350px;
-    border: 5px solid #f9cb00;
-    border-radius: 20px;
-    box-shadow: 0 0 20px #ffffff;
-}
-
-.information > h2{
-    color: #fff;
-    grid-column: 1 / -1;
-    justify-self: center;
-    text-align: center;
-}
-
 /*=== FOOTER ===*/
 footer {
     margin: 20px auto 0;
@@ -131,10 +140,10 @@ footer {
     max-width: 900px; 
     text-align: center;
     padding: 15px;
-    border: 5px solid #00d0f9;
+    border: 5px solid #32f900;
     border-radius: 20px;
     box-shadow: 0 0 20px #ffffff;
-    color: #f2c46e;
+    color: #f90000;
     text-shadow: 1px 1px 3px #330033;
 }
 /* === MOBILE MENU RULES (UNDER 700px) ==== */
