@@ -1,0 +1,215 @@
+/*=== Body ===*/
+body {
+    padding: 0;
+    margin: 0;
+    background: url(../../../images/styling/the-grid-background.jpg) no-repeat;
+    background-size: cover;
+     min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+/*=== Header ===*/
+header{
+    background: url("../../../images/styling/header-with-mcp.jpg") no-repeat center;
+    background-size: 100% 300px;
+    height: 230px;
+    min-width: 1200px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+    border: 5px solid #00d0f9;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #00d0f9;
+    display: block;
+}
+
+
+/*=== Navagation ===*/
+nav {
+    background: url(../../../images/styling/nav.gif);
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 50px;
+    height: 50px;
+    border-top: 3px solid #00d0f9;
+    border-bottom: 3px solid #00d0f9;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5em;
+
+    display: block;
+    padding: 20px;
+    text-align: center;
+
+    border-top: 1px solid grey;
+    text-shadow: 0px 0px 3px #22a203;
+    transition: background 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #00d0f9;
+    text-shadow: 4px 4px 2px #ff0000;
+}
+
+/* === Menu Button === */
+.menu-btn { 
+    cursor: pointer; 
+    border: none; 
+    background-color: transparent; 
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: rgb(255, 249, 249);
+    margin: 5px 0;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.change .bar2 { opacity: 0; }
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/*=== Main Content===*/
+
+.welcome-message > h1 {
+    color: #fff;
+    grid-column: 1 / -1;
+    justify-self: center;
+    text-align: center;
+}
+
+.projects{
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 40px;
+}
+
+.projects img {
+    height: 350px;
+    width: 350px;
+    border: 5px solid #f9cb00;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ffffff;
+}
+
+.information > h2{
+    color: #fff;
+    grid-column: 1 / -1;
+    justify-self: center;
+    text-align: center;
+}
+
+/*=== FOOTER ===*/
+footer {
+    margin: 20px auto 0;
+    width: 90%; 
+    max-width: 900px; 
+    text-align: center;
+    padding: 15px;
+    border: 5px solid #00d0f9;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ffffff;
+    color: #f2c46e;
+    text-shadow: 1px 1px 3px #330033;
+}
+/* === MOBILE MENU RULES (UNDER 700px) ==== */
+@media screen and (max-width: 699px) {
+
+    /* Show hamburger on mobile */
+    .menu-btn {
+        display: inline-block;
+    }
+
+    /* Make the nav a dropdown container on mobile */
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        gap: 0;
+        padding: 0;
+    }
+
+    /* Hide links by default on mobile */
+    nav a {
+        display: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Show links when JS toggles nav.open */
+    nav.open a {
+        display: block;
+    }
+}
+
+/* ===== Tablet ===== */
+@media screen and (min-width: 700px) {
+   
+    .projects {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    body {
+        max-width: none;
+    }
+
+    header img {
+        width: 150px;
+        height: 168px;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    nav {
+        flex-direction: row;
+        height: 50px;
+        padding: 0 20px;
+        gap: 50px;
+    }
+
+    nav a {
+        display: inline-block;
+        border-top: none;
+        padding: 10px 25px;
+    }
+}
+
+/* ===== Desktop ===== */
+@media screen and (min-width: 1000px) {
+    
+    .projects {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
